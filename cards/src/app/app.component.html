@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store </title>
+  <title>ANGULAR </title>
 </head>
-  <body>
+<body>
   
       <h1>Escribe un nombre</h1>
       <input type="text" [(ngModel)]= title>
-      
       <input type="text" [(ngModel)]= num1>
       <input type="text" [(ngModel)]= num2>
       <h1> {{title}}</h1>
@@ -21,6 +20,19 @@
       <div *ngIf="num2 > num1">
         el numer {{num2}} es mayor a {{num1}};
       </div>
-  
-  </body>
+
+      <h1>uso ng For</h1>
+      <input type="text" [(ngModel)]=name>
+      <button (click)="addName(name)">Add</button>
+       
+      <ul>
+        <li *ngIf="nombres.length === 0"> La lista esta vacia</li>
+        <li *ngFor="let nombres of nombres; index as indice">
+           {{indice}} {{nombres}}
+           <button (click)="deleteName(indice)">Delete</button>
+        </li>
+
+      </ul>
+
+</body>
 </html> 

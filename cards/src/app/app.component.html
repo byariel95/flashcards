@@ -31,8 +31,12 @@
            {{indice}} {{nombres}}
            <button (click)="deleteName(indice)">Delete</button>
         </li>
-
       </ul>
 
+      <div *ngFor="let product of products">
+          <h2>{{product.title}}</h2>
+          <p>{{product.price}}</p>
+          <img [src]="product.image" alt="" style="width: 150px; height: 150px;">
+      </div>
 </body>
 </html> 

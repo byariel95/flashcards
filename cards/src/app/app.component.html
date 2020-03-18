@@ -33,10 +33,7 @@
         </li>
       </ul>
 
-      <div *ngFor="let product of products">
-          <h2>{{product.title}}</h2>
-          <p>{{product.price}}</p>
-          <img [src]="product.image" alt="" style="width: 150px; height: 150px;">
-      </div>
+      <app-product></app-product>
+    
 </body>
 </html> 

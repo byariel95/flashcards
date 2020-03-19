@@ -35,10 +35,8 @@
 
         <strong>Total {{total}} </strong>
 
-        <div *ngFor="let product of products">
-        <app-product (addedProduct)="addecart($event)" [prod]="product"></app-product>
+      <div class="product-container">
+          <app-product *ngFor="let product of products" (addedProduct)="addecart($event)" [prod]="product"></app-product>
       </div>
-      
-    
 </body>
 </html> 

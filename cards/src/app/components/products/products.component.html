@@ -1,0 +1,6 @@
+
+<strong>Total {{ total }} </strong>
+
+<div class="product-container">
+    <app-product appHighlight *ngFor="let product of products" (addedProduct)="addecart($event)" [prod]="product"></app-product>
+</div>

@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { PageErrorComponent } from './components/page-error/page-error.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PageErrorComponent } from './components/page-error/page-error.component
     HeaderComponent,
     FooterComponent,
     BannerComponent,
-    PageErrorComponent
+    PageErrorComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService} from '../../services/products.service';
 import { Product} from '../../product.model';
 
 @Component({
@@ -9,55 +10,12 @@ import { Product} from '../../product.model';
 export class ProductsComponent implements OnInit {
 
   total = 0;
+  products: Product[];
 
-  products: Product[] = [
-    {
-      id: '1',
-      image: 'assets/images/kisspng.png',
-      title: 'Camiseta',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '2',
-      image: 'assets/images/kisspng.png',
-      title: 'Hoodie',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '3',
-      image: 'assets/images/kisspng.png',
-      title: 'Mug',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '4',
-      image: 'assets/images/kisspng.png',
-      title: 'Pin',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '5',
-      image: 'assets/images/kisspng.png',
-      title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-    {
-      id: '6',
-      image: 'assets/images/kisspng.png',
-      title: 'Stickers',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    },
-  ];
-
-  constructor() { }
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
+    this.products = this.productService.getAllProducts();
   }
 
   addecart(id: any){

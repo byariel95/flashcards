@@ -11,7 +11,7 @@ export class ProductComponent {
 
     @Input() prod: Product;
     @Output() addedProduct: EventEmitter<any> = new EventEmitter(); // definir tipo de dato
-    
+
     today = new Date();
 
     addCar() {

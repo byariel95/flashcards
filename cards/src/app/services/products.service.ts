@@ -11,42 +11,42 @@ export class ProductsService {
       id: '1',
       image: 'assets/images/kisspng.png',
       title: 'Camiseta',
-      price: 80000,
+      price: 50000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '2',
       image: 'assets/images/kisspng.png',
       title: 'Hoodie',
-      price: 80000,
+      price: 90000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '3',
       image: 'assets/images/kisspng.png',
       title: 'Mug',
-      price: 80000,
+      price: 10000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '4',
       image: 'assets/images/kisspng.png',
       title: 'Pin',
-      price: 80000,
+      price: 30000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '5',
       image: 'assets/images/kisspng.png',
       title: 'Stickers',
-      price: 80000,
+      price: 20000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '6',
       image: 'assets/images/kisspng.png',
       title: 'Stickers',
-      price: 80000,
+      price: 50000,
       description: 'bla bla bla bla bla'
     },
   ];

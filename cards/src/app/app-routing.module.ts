@@ -6,7 +6,7 @@ import {  DemoComponent } from './components/demo/demo.component';
 import { PageErrorComponent } from './components/page-error/page-error.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
-
+import {  AdminGuard } from './admin.guard';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: ()=> import('./components/home/home.module').then(m => m.HomeModule)
+        loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'products',
@@ -32,6 +32,7 @@ const routes: Routes = [
       },
       {
         path: 'contact',
+        canActivate: [AdminGuard],
         component: ContactComponent
       },
 

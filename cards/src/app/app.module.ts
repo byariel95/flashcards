@@ -8,6 +8,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 // moodules
 import { SharedModule } from './components/shared/shared.module';
 import { CoreModule} from './components/core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CoreModule} from './components/core/core.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

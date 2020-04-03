@@ -5,5 +5,5 @@
     <img [src]="prod.image" alt="imagen">
     <p>{{prod.description | slice:0:5}}</p>
     <p>{{today | date:'EEEE'}}</p>
-    <button (click)="addCar()">Add cart</button>
-    <a [routerLink]="['/products', prod.id]"> Ver Detalle</a>
+    <button (click)="addCar()" mat-raised-button>Add cart</button>
+    <a [routerLink]="['/products', prod.id]" mat-stroked-button> Ver Detalle</a>

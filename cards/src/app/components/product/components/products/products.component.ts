@@ -10,12 +10,19 @@ import { Product} from '../../../core/models/product.model';
 export class ProductsComponent implements OnInit {
 
   total = 0;
-  products: Product[];
+  products: Product[] = [];
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getAllProducts();
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
+    this.productService.getAllProducts()
+    .subscribe(data => {
+      this.products = data;
+    });
   }
 
   addecart(id: any){

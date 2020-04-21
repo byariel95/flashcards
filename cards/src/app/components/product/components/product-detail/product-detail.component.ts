@@ -27,5 +27,34 @@ export class ProductDetailComponent implements OnInit {
       this.product = data;
     });
   }
+  createProduct() {
+    const newProduct: Product = {
+      id: '24',
+      title: 'camisa desde miservice',
+      image: 'assets/images/camiseta.png',
+      price: 4500,
+      description: 'este es un nuevo producto'
+    };
+
+    this.productsService.createProduct(newProduct).subscribe(data => {
+      console.log(data);
+    });
+  }
+
+  updateProduct() {
+    const modifiedProduct: Partial<Product> = {
+      price: 4500,
+      description: 'producto actualizado'
+    };
+
+    this.productsService.updateProduct('123', modifiedProduct).subscribe(data => {
+      console.log(data);
+    });
+  }
+  deleteProduct() {
+    this.productsService.deleteProduct('123').subscribe(data => {
+      console.log(data);
+    });
+  }
 
 }

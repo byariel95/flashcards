@@ -44,10 +44,10 @@ export class ProductDetailComponent implements OnInit {
   updateProduct() {
     const modifiedProduct: Partial<Product> = {
       price: 4500,
-      description: 'producto actualizado'
+      description: 'llevare 2'
     };
 
-    this.productsService.updateProduct('123', modifiedProduct).subscribe(data => {
+    this.productsService.updateProduct('559', modifiedProduct).subscribe(data => {
       console.log(data);
     });
   }

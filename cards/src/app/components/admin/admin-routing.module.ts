@@ -4,6 +4,7 @@ import { ProductFormComponent} from './components/product-form/product-form.comp
 import { NavComponent} from './components/nav/nav.component';
 import { DashboardComponent} from './components/dashboard/dashboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { InventaryComponent } from './components/inventary/inventary.component';
 
 const routes: Routes = [
   {
@@ -17,15 +18,17 @@ const routes: Routes = [
        {
         path: 'products',
         component: ProductsListComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'inventary',
+        component: InventaryComponent
       }
     ]
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
   }
- 
-
 ];
 
 @NgModule({
